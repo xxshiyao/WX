@@ -1,5 +1,5 @@
 {
-  "name": "photography",
+  "name": "zhuoying",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangwenzhiwwz/WX.git"
+    "url": "git+https://github.com/xxshiyao/WX.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wangwenzhiwwz/WX/issues"
+    "url": "https://github.com/xxshiyao/WX/issues"
   },
-  "homepage": "https://github.com/wangwenzhiwwz/WX#readme",
+  "homepage": "https://github.com/xxshiyao/WX#readme",
   "dependencies": {
     "apifm-wxapi": "^2.2.0"
   }
