@@ -13,6 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   async onLoad (options) {
+    // 搜索文章
+    if (!(typeof options.keyword == "undefined"
+      || options.keyword == null
+      || options.keyword == ""
+      || options.keyword.match(/^[ ]*$/))) {
+      console.log("search keyword: " + options.keyword);
+      this.fetchArticlesByKeyword(options.keyword);
+      return;
+    }
     // 读取分类详情
     const categoryInfo = await WXAPI.cmsCategoryDetail(options.pid);
     if (categoryInfo.code != 0) {
@@ -49,7 +58,26 @@ Page({
       });
     }
   },
-
+  async fetchArticlesByKeyword(keyword) {
+    const response = await WXAPI.cmsArticles({
+      keywordsLike: keyword
+    });
+    if (response.code == 0) {
+      this.setData({
+        articleList: this.data.articleList.concat(response.data)
+      });
+    } else {
+      wx.showModal({
+          title: '提示',
+          content: '未找到相关作品，再换个关键词试试吧 ^_^',
+          showCancel: false,
+          confirmText: '返回',
+          success(res) {
+            wx.navigateBack()
+          }
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    articleList: undefined, // 推荐的文章
+    photoCategories: undefined, // 推荐的文章
+    searchKeyword: '' // 搜索词
   },
 
   /**
@@ -36,17 +37,47 @@ Page({
    * 生命周期函数--监听页面显示
    */
   async onShow () {
-    // 读取后台推荐的文章列表
-    const articleList = await WXAPI.cmsArticles({
-      isRecommend: true
-    });
-    if (articleList.code == 0) {
-      this.setData({
-        articleList: articleList.data
+    // 加载所有的分类数据
+    const cmsCategories = await WXAPI.cmsCategories();
+    if (cmsCategories.code == 0) {
+      const _cmsCategories = cmsCategories.data; // 所有分类数据
+      // 筛选推荐的分类
+      const l1Categories = _cmsCategories.filter(entity => {
+        return entity.name == '摄影摄像';
       });
+      const l2Categories = _cmsCategories.filter(entity => {
+        return entity.pid == l1Categories[0].id;
+      });
+      this.setData({
+        photoCategories: l2Categories
+      });
+      console.log(l2Categories)
     }
   },
-
+  onChange(e) {
+    this.setData({
+      searchKeyword: e.detail
+    });
+  },
+  onSearch(event) {
+    console.log(this.data.searchKeyword);
+    if (typeof this.data.searchKeyword == "undefined"
+      || this.data.searchKeyword == null
+      || this.data.searchKeyword == ""
+      || this.data.searchKeyword.match(/^[ ]*$/)) {
+      wx.showModal({
+        title: '提示',
+        content: '输入的关键词为空！',
+        showCancel: false,
+        confirmText: '返回',
+        success(res) {}
+      })
+      return;
+    }
+    wx.navigateTo({
+      url: '/pages/classify/classify?keyword=' + this.data.searchKeyword
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

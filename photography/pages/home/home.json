@@ -4,6 +4,9 @@
     "backgroundTextStyle": "light",
     "disableScroll": true,
     "usingComponents": {
-        "loading": "/pages/component/loading/loading"
+        "loading": "/pages/component/loading/loading",
+        "van-search": "../../miniprogram_npm/vant-weapp/search/index",
+        "van-row": "../../miniprogram_npm/vant-weapp/row/index",
+        "van-col": "../../miniprogram_npm/vant-weapp/col/index"
     }
 }

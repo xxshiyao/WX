@@ -3,7 +3,7 @@
     {{categoryInfo.name}}
   </view>
   <view class="aritcle-list">
-    <navigator wx:for="{{articleList}}" wx:key="{{item.id}}" hover-class='none' class="article-item" url='../article/article?id={{item.id}}'>
+    <navigator wx:for="{{articleList}}" wx:key="id" hover-class='none' class="article-item" url='../article/article?id={{item.id}}'>
       <image class="article-cover" mode='aspectFill' src='{{item.pic}}'></image>
       <view class="article-info">
         <text class="title">{{item.title}}</text>
