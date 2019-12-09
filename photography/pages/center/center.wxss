@@ -2,113 +2,122 @@ page {
     background: #f3f3f3;
 }
 
-.center_bg {
-    width: 100%;
-    position: absolute;
-    height: 330rpx;
-    top: 0;
-    left: 0;
-    z-index: 0;
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  margin-bottom: 20rpx;
 }
 
-.avatar-warp {
-    margin: 160rpx 30rpx 0;
-    background: rgba(255, 255, 255, 0.99);
-    border-radius: 20rpx;
-    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
+.logo {
+  padding-left: 50rpx;
+  width: 120rpx;
+  height: 120rpx;
 }
 
-.avatar-warp .avatar {
-    display: block;
-    width: 160rpx;
-    height: 160rpx;
-    border-radius: 50%;
-    border: 4rpx solid #fff;
-    margin: 0 auto;
-    position: relative;
-    top: -80rpx;
-    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.4);
-    margin-bottom: -80rpx;
+.contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-weight: normal;
+  padding-left: 300rpx;
 }
 
-.nickname {
-    text-align: center;
-    font-size: 46rpx;
-    font-weight: bold;
-    padding: 20rpx 0 10rpx;
+.telphone {
+  color: red;
 }
 
-.user-info {
-    text-align: center;
-    font-size: 28rpx;
-    line-height: 40rpx;
-    color: #999;
+.call {
+  width: 50rpx;
+  height: 50rpx;
+  padding-bottom: 50rpx;
+  vertical-align: middle;
 }
 
-.user-info image {
-    display: inline-block;
-    width: 40rpx;
-    height: 40rpx;
-    vertical-align: top;
-    margin-right: 8rpx;
+.title_h1 {
+  border-top: 1px solid #efefef;
+  font-size: 40rpx;
+  display: block;
+  font-weight: bold;
+  margin: 0 40rpx;
+  padding: 20rpx 0;
 }
 
-.article-info {
-    overflow: hidden;
-    padding: 40rpx 0;
+.text {
+  display: flex;
+  font-size: 30rpx;
+  font-weight: normal;
+  padding-left: 40rpx;
 }
 
-.article-item {
-    width: 33.33%;
-    float: left;
-    text-align: center;
-    font-size: 28rpx;
-    color: #666;
-    border-right: 1px solid #ededed;
+.title_h2 {
+  border-top: 1px solid #efefef;
+  font-size: 40rpx;
+  display: block;
+  font-weight: normal;
+  margin: 0 40rpx;
+  padding-left: 0rpx;
+  padding-top: 20rpx;
 }
 
-.article-info .article-item:last-child {
-    border-right: none;
+.checked_parameter{
+  background: red;
+  padding: 3rpx;
+  border-radius: 5rpx;
+  color: white;
 }
 
-.article-item .num {
-    font-size: 46rpx;
-    display: block;
-    padding-bottom: 8rpx;
-    color: #222;
-    font-weight: bold;
+.parameter-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 30rpx 50rpx 30rpx 0rpx;
 }
 
-/*菜单*/
-
-.menu-warp {
-    background: #fff;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20rpx;
-    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
-    margin: 30rpx 30rpx;
-    font-size: 32rpx;
-    line-height: 40rpx;
-    padding: 30rpx 40rpx;
-    position: relative;
+.parameter-block {
+  align-self: flex-end;
+  padding: 30rpx 30rpx 30rpx 70rpx;
 }
 
-.menu-warp .icon {
-    display: inline-block;
-    width: 40rpx;
-    height: 40rpx;
-    vertical-align: top;
-    margin-right: 10rpx;
+.parameter-wrap .title_h2  {
+  border-top: 1px solid #efefef;
+  font-size: 40rpx;
+  display: block;
+  font-weight: normal;
+  margin: 0 40rpx;
+  padding-left: 0rpx;
+  padding-top: 20rpx;
+  padding-right: 200rpx;
 }
 
-.menu-warp .next {
-    display: inline-block;
-    width: 40rpx;
-    height: 40rpx;
-    vertical-align: top;
-    position: absolute;
-    right: 40rpx;
-    top: 30rpx;
+.kefu-botton {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  padding: 0 0 0 0;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.kefu-botton[plain] {
+  border: 0;
+}
+
+.kefu-botton-pic {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20rpx;
 }

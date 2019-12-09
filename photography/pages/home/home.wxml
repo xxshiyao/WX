@@ -7,7 +7,6 @@
   bind:search="onSearch"
   placeholder="请输入搜索关键词"
 />
-
 <van-row class="imageBox">
     <van-col wx:for="{{photoCategories}}" wx:key="key" span="12" class="imgCol">
       <navigator hover-class="none" class="article-item" url='/pages/classify/classify?pid={{item.id}}'>

@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件。",
+	"cloudfunctionRoot": "cloud/",
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
@@ -25,6 +26,7 @@
 	"isGameTourist": true,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,

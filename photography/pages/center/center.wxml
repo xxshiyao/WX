@@ -1,33 +1,61 @@
-<view>
-  <image class="center_bg" mode='aspectFill' src='/assets/images/my_bg.jpg'></image>
-  <view class="avatar-warp">
-    <image class="avatar" mode='aspectFill' src='{{mylogo}}'></image>
-    <view class="nickname">{{myname}}</view>
-    <view class="user-info">
-      <image src='../../assets/icons/level.png'></image>影坛新手</view>
-    <view class="article-info">
-      <view class="article-item">
-        <text class="num">{{newsNumber}}</text>作品</view>
-      <view class="article-item">
-        <text class="num">{{fileNumber}}</text>胶片</view>
-      <view class="article-item">
-        <text class="num">{{views}}</text>浏览</view>
-      <!-- <navigator hover-class='none' url='../credits/credits' class="article-item"><text class="num">{{views}}</text>浏览</navigator> -->
-    </view>
+<view class="top">
+    <image class="logo" src="/assets/images/logo_small.jpg"/>
+  <view class="contact" span="8">
+    <text>联系我们</text>
+    <text class="telphone">137 1668 9778</text>
   </view>
-  <view class="menu-warp">
-    <navigator url='/pages/page/article?key=introduce'>
-      <image class="icon" src='../../assets/icons/about.png'></image>
-      关于我想学摄影
-      <image class="next" src='../../assets/icons/next.png'></image>
-    </navigator>
-  </view>
-  <view class="menu-warp">
-    <navigator url='/pages/page/article?key=about'>
-      <image class="icon" src='../../assets/icons/developer.png'></image>
-      关于开发者
-      <image class="next" src='../../assets/icons/next.png'></image>
-    </navigator>
-  </view>
-  <button type="default" bindtap="calling" style='width:80%;margin-bottom:20px; background-color:#fc0'>电话联系我</button>
+  <image class="call" src="/assets/icons/dianhua-2.png" bindtap="calling"/>
 </view>
+<text class="title_h1">体验一下：</text>
+<text class="text">提出您的专属需求，交给我们。</text>
+<text class="title_h2">A：商业拍摄</text>
+
+<view class='parameter-wrap'>
+  <block wx:for="{{parameter}}" wx:key="parameter">
+      <view wx:if="{{item.id==10}}">
+        <text class="title_h2">B：现场拍摄</text>
+      </view>
+      <view class="parameter-block">
+        <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
+      </view>
+  </block>
+</view>
+
+<text class="tips">请输入您的基本信息：</text>
+<van-cell-group>
+  <van-field
+    id="inputName"
+    required
+    label="姓名"
+    placeholder="请输入您的姓名"
+    bind:change="onChange"
+  />
+  <van-field
+    id="inputAddress"
+    label="地区"
+    placeholder="请输入拍摄所在地区"
+    required
+    bind:change="onChange"
+  />
+  <van-field
+    id="inputPhone"
+    label="手机号"
+    placeholder="请输入您的手机号"
+    required
+    bind:change="onChange"
+  />
+  <van-field
+    id="inputDescrib"
+    label="描述"
+    placeholder="简单描述下您的拍摄需求"
+    type="textarea"
+    autosize
+    bind:change="onChange"
+  />
+</van-cell-group>
+<view class="submit">
+  <van-button type="danger" bind:click="onSubmit">提交信息</van-button>
+</view>
+ <button class="kefu-botton" open-type="contact" plain="true">
+  <image class="kefu-botton-pic" src='/assets/icons/kefuhongseqietu.png' mode='widthFix'></image>
+  </button>

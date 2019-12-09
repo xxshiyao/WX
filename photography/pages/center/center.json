@@ -1,6 +1,13 @@
 {
     "navigationBarBackgroundColor": "#f2f2f2",
-    "disableScroll": true,
+    "disableScroll": false,
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "关于我"
+    "navigationBarTitleText": "专属定制",
+    "usingComponents": {
+      "van-button":"../../miniprogram_npm/vant-weapp/button/index",
+      "van-row": "../../miniprogram_npm/vant-weapp/row/index",
+      "van-field": "../../miniprogram_npm/vant-weapp/field/index",
+      "van-cell": "../../miniprogram_npm/vant-weapp/cell/index",
+      "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group/index"
+    }
 }
