@@ -1,5 +1,6 @@
 <!--pages/home/home.wxml-->
 <loading></loading>
+<kefu></kefu>
 
 <swiper circular="true"
         indicator-dots="true"
@@ -25,7 +26,7 @@
 </view>
 
 <view class="shanpai">
-  <navigator url="/pages/flash/flash" open-type="switchTab" hover-class="navigator-hover">
+  <navigator hover-class="none"url='/pages/classify2sp/classify2sp?id=6990'>
     <image mode="scaleToFill" style="width: 730rpx; height: 200rpx" src="/assets/images/shanpai.png"></image>
   </navigator>
 </view>
@@ -43,11 +44,11 @@
   </view>
 
   <view>
-    <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6979'>
+    <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6979'>
       <image mode="scaleToFill" src='{{cmsCategoriesL1[0].icon}}'></image>
       <text>{{cmsCategoriesL1[0].name}}</text>
     </navigator>
-      <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6980'>
+      <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6980'>
       <image mode="scaleToFill" src='{{cmsCategoriesL1[1].icon}}'></image>
       <text>{{cmsCategoriesL1[1].name}}</text>
     </navigator>
@@ -60,22 +61,31 @@
   </view>
 
   <view>
-    <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6981'>
+    <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6981'>
       <image mode="scaleToFill" src='{{cmsCategoriesL1[2].icon}}'></image>
       <text>{{cmsCategoriesL1[2].name}}</text>
     </navigator>
-      <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6982'>
+      <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6982'>
       <image mode="scaleToFill" src='{{cmsCategoriesL1[3].icon}}'></image>
       <text>{{cmsCategoriesL1[3].name}}</text>
     </navigator>
   </view>
+</view>
+
+<view class="list">
+  <view class="title">
+    <text class="h1">「舞台搭建」</text>
+  </view>
+
+  <view>
+    <navigator hover-class="none" class="class-l1" url='/pages/classify2sp/classify2sp?id=6991'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[4].icon}}'></image>
+      <text>{{cmsCategoriesL1[4].name}}</text>
+    </navigator>
+  </view>
+</view>
 
   <navigator url="/pages/center/center" open-type="switchTab" hover-class="navigator-hover" class="costomized">
       <image mode="scaleToFill" src='/assets/images/customized.jpg'></image>
   </navigator>
   <image mode="scaleToFill" style="width: 724rpx; height: 290rpx" src="/assets/images/zhuoying.png"></image>
-</view>
-
- <button class="kefu-botton" open-type="contact" plain="true">
-  <image src='/assets/icons/kefu.png' mode='widthFix'></image>
-  </button>

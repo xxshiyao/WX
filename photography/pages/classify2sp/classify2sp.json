@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+      "kefu": "/pages/component/kefu/kefu"
+    }
+}

@@ -1,3 +1,4 @@
+<kefu></kefu>
 <view class="top">
     <!-- <image class="logo" src="/assets/images/logo-small.jpg"/> -->
   <text class="logo-text">灼影文化</text>
@@ -100,7 +101,3 @@
 客观上对应的往往是时间和技术成本。 
   </text>
 </view>
-
- <button class="kefu-botton" open-type="contact" plain="true">
-  <image src='/assets/icons/kefu.png' mode='widthFix'></image>
-  </button>

@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/classify/classify",
+    "pages/classify2/classify2",
+    "pages/classify2sp/classify2sp",
+    "pages/classify3/classify3",
     "pages/hot/hot",
     "pages/center/center",
     "pages/credits/credits",
@@ -9,7 +11,9 @@
     "pages/commentList/commentList",
     "pages/article/article",
     "pages/page/article",
-    "pages/flash/flash"
+    "pages/flash/flash",
+    "pages/component/kefu/kefu",
+    "pages/webview/webview"
   ],
   "window": {
     "backgroundTextStyle": "light",

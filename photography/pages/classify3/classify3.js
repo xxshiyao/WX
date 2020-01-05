@@ -20,31 +20,27 @@ Page({
       || options.keyword.match(/^[ ]*$/))) {
       console.log("search keyword: " + options.keyword);
       this.fetchArticlesByKeyword(options.keyword);
-      return;
-    }
-    // 读取分类详情
-    const categoryInfo = await WXAPI.cmsCategoryDetail(options.pid);
-    if (categoryInfo.code != 0) {
-      wx.showModal({
-        title: '提示',
-        content: '当前分类不存在',
-        showCancel: false,
-        confirmText: '返回',
-        success(res) {
-          wx.navigateBack()
-        }
+      // 设置标题
+      wx.setNavigationBarTitle({
+        title: options.keyword
       })
       return;
     }
-    // 设置小程序名称
-    wx.setNavigationBarTitle({
-      title: wx.getStorageSync('mallName')
-    })    
-    this.setData({
-      categoryInfo: categoryInfo.data
+    // 读取分类详情并设置标题
+    const cmsCategories = wx.getStorageSync("cmsCategories");
+    const categoryInfoL2 = cmsCategories.filter(entity => {
+      return entity.id == options.pid;
     });
+    const categoryInfoL1 = cmsCategories.filter(entity => {
+      return entity.id == categoryInfoL2[0].pid;
+    });
+    wx.setNavigationBarTitle({
+      title: categoryInfoL1[0].name + " · " + categoryInfoL2[0].name
+    })
+
     // 读取分类下的文章
     this.fetchArticles(options.pid);
+
   },
 
   async fetchArticles (pid) {

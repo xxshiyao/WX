@@ -9,6 +9,6 @@ App({
     })
   },
   globalData: {
-    
+
   }
 })

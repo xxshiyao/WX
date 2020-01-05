@@ -5,6 +5,7 @@
     "disableScroll": false,
     "usingComponents": {
         "loading": "/pages/component/loading/loading",
+        "kefu": "/pages/component/kefu/kefu",
         "van-search": "../../miniprogram_npm/vant-weapp/search/index",
         "van-row": "../../miniprogram_npm/vant-weapp/row/index",
         "van-col": "../../miniprogram_npm/vant-weapp/col/index"

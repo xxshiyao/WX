@@ -1,0 +1,15 @@
+<kefu></kefu>
+<view>
+  <view wx:if="{{id==6990}}">
+    <navigator wx:for="{{articleList}}" wx:key="id" hover-class='none' class="class-l2" url='../webview/webview?url={{item.income}}'>
+      <image mode='scaleToFill' src='{{item.pic}}'></image>
+      <text class="title">{{item.title}}</text>
+    </navigator>
+  </view>
+  <view wx:else>
+    <navigator wx:for="{{articleList}}" wx:key="id" hover-class='none' class="class-l2" url='../article/article?id={{item.id}}'>
+      <image mode='scaleToFill' src='{{item.pic}}'></image>
+      <text class="title">{{item.title}}</text>
+    </navigator>
+  </view>
+</view>

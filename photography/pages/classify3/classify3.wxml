@@ -1,0 +1,9 @@
+<kefu></kefu>
+<van-row custom-class="aritcle-list">
+  <van-col custom-class="aritcle-col" wx:for="{{articleList}}" wx:key="id" span="10" offset="1">
+    <navigator class="article-item" url='../article/article?id={{item.id}}'>
+      <image class="article-cover" mode='scaleToFill' src='{{item.pic}}'></image>
+      <text class="title">{{item.title}}</text>
+    </navigator>
+  </van-col>
+</van-row>

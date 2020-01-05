@@ -1,0 +1,3 @@
+<button class="kefu-botton" open-type="contact" plain="true">
+  <image src='/assets/icons/kefu.png' mode='widthFix'></image>
+</button>

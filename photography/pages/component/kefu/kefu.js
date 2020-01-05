@@ -1,4 +1,4 @@
-// pages/flash.js
+// pages/component/kefu/kefu.js
 Page({
 
   /**

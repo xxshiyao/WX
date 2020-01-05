@@ -44,8 +44,10 @@ Page({
       this.setData({
         cmsCategories: _cmsCategories,
         homeSwiper: homeSwiper,
-        cmsCategoriesL1: l1Categories
+        cmsCategoriesL1: l1Categories,
       });
+      wx.setStorageSync("cmsCategories", _cmsCategories);
+
     }
   },
 
@@ -82,7 +84,7 @@ Page({
       return;
     }
     wx.navigateTo({
-      url: '/pages/classify/classify?keyword=' + this.data.searchKeyword
+      url: '/pages/classify3/classify3?keyword=' + this.data.searchKeyword
     })
   },
   /**

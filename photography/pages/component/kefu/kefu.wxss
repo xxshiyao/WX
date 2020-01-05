@@ -1,0 +1,15 @@
+.kefu-botton {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  padding: 0 0 0 0;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.kefu-botton[plain] {
+  width: 150rpx;
+  height: 150rpx;
+  border: 0;
+}
