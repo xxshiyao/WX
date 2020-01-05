@@ -1,17 +1,81 @@
 <!--pages/home/home.wxml-->
 <loading></loading>
-<image class="img" src="../../assets/images/center_bg.jpg" mode="widthFix"/>
+
+<swiper circular="true"
+        indicator-dots="true"
+        previous-margin="0rpx"
+        duration="300"
+        next-margin="0rpx"
+        indicator-color="#fff">
+  <swiper-item wx:for="{{homeSwiper}}" wx:key="id">
+    <view class="swiper-item" data-id="{{item.id}}">
+      <image src="{{item.icon}}" mode='aspectFill' class="slide-image" />
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="topArea">
+  <text class="topText1">影|摄|心|声</text>
+  <text class="topText2">摄影既可绚丽张扬抒发本质，又能回归真实与随性</text>
+</view>
+
+<view class="homeVideo">
+  <video show-center-play-btn="true" src="https://dcdn.it120.cc/2019/12/28/83960ef0-8e94-4c84-b72d-e37bf0e025a1.mp4" controls="true" objectFit="fill" style="width: 730rpx; height: 410rpx">
+  </video>
+</view>
+
+<view class="shanpai">
+  <navigator url="/pages/flash/flash" open-type="switchTab" hover-class="navigator-hover">
+    <image mode="scaleToFill" style="width: 730rpx; height: 200rpx" src="/assets/images/shanpai.png"></image>
+  </navigator>
+</view>
+
 <van-search
   value="{{ searchKeyword }}"
   bind:change="onChange"
   bind:search="onSearch"
   placeholder="请输入搜索关键词"
 />
-<van-row class="imageBox">
-    <van-col wx:for="{{photoCategories}}" wx:key="key" span="12" class="imgCol">
-      <navigator hover-class="none" class="article-item" url='/pages/classify/classify?pid={{item.id}}'>
-        <image class="article-clover" src='{{item.icon}}'></image>
-        <text class="article-title">{{item.name}}</text>
-      </navigator>
-    </van-col>
-</van-row>
+
+<view class="list">
+  <view class="title">
+    <text class="h1">「平面拍摄」</text>
+  </view>
+
+  <view>
+    <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6979'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[0].icon}}'></image>
+      <text>{{cmsCategoriesL1[0].name}}</text>
+    </navigator>
+      <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6980'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[1].icon}}'></image>
+      <text>{{cmsCategoriesL1[1].name}}</text>
+    </navigator>
+  </view>
+</view>
+
+<view class="list">
+  <view class="title">
+    <text class="h1">「视频拍摄」</text>
+  </view>
+
+  <view>
+    <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6981'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[2].icon}}'></image>
+      <text>{{cmsCategoriesL1[2].name}}</text>
+    </navigator>
+      <navigator hover-class="none" class="class-l1" url='/pages/classify/classify?pid=6982'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[3].icon}}'></image>
+      <text>{{cmsCategoriesL1[3].name}}</text>
+    </navigator>
+  </view>
+
+  <navigator url="/pages/center/center" open-type="switchTab" hover-class="navigator-hover" class="costomized">
+      <image mode="scaleToFill" src='/assets/images/customized.jpg'></image>
+  </navigator>
+  <image mode="scaleToFill" style="width: 724rpx; height: 290rpx" src="/assets/images/zhuoying.png"></image>
+</view>
+
+ <button class="kefu-botton" open-type="contact" plain="true">
+  <image src='/assets/icons/kefu.png' mode='widthFix'></image>
+  </button>

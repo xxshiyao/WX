@@ -1,0 +1,15 @@
+[
+  {
+    "name": "mail",
+    "value": {
+      "receiver": "zy_culture_robot@163.com",
+      "type": "测试类型",
+      "name": "张小明",
+      "address": "北京",
+      "phone": "13900000000",
+      "describ": "拍摄一个现场活动",
+      "wx_name": "小小",
+      "wx_icon": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqdPE10WPQZxYia9JHMbzQ0u92jiaftKD1LCOz9UWdakO2CvdoNh3nE38vGl7BR5QZKjThA4GtbfVEQ/132"
+    }
+  }
+]

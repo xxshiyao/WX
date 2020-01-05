@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    parameter: [
+    parameter1: [
       { id: 1, name: '电影海报' },
       { id: 2, name: '平面广告' },
       { id: 3, name: '静物拍摄' },
@@ -15,8 +15,10 @@ Page({
       { id: 5, name: 'TVC广告' },
       { id: 6, name: '美食拍摄' },
       { id: 7, name: '企业宣传' },
-      { id: 8, name: 'V L O G' },
-      { id: 9, name: '其它' },
+      { id: 8, name: 'VLOG' },
+      { id: 9, name: '其它' }
+    ],
+    parameter2: [
       { id: 10, name: '会议拍摄' },
       { id: 11, name: '体育赛事' },
       { id: 12, name: '商业活动' },
@@ -31,17 +33,20 @@ Page({
     inputName: '',
     inputPhone: '',
     inputAddress: '',
-    inputDescrib: ''
+    inputDescrib: '',
+    hidden: true
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.parameter[0].checked = true;
+    this.data.parameter1[0].checked = true;
     this.setData({
-      parameter: this.data.parameter,
-      selectType: this.data.parameter[0].name
+      parameter1: this.data.parameter1,
+      parameter2: this.data.parameter2,
+      selectType: this.data.parameter1[0].name
     })
   },
 
@@ -100,19 +105,30 @@ Page({
   parameterTap: function (e) {
     var that = this
     var this_checked = e.currentTarget.dataset.id
-    var parameterList = this.data.parameter//获取Json数组
+    var parameterList1 = this.data.parameter1//获取Json数组
+    var parameterList2 = this.data.parameter2//获取Json数组
     var parameName = ''
-    for (var i = 0; i < parameterList.length; i++) {
-      if (parameterList[i].id == this_checked) {
-        parameterList[i].checked = true;//当前点击的位置为true即选中
-        parameName = parameterList[i].name
+    for (var i = 0; i < parameterList1.length; i++) {
+      if (parameterList1[i].id == this_checked) {
+        parameterList1[i].checked = true;//当前点击的位置为true即选中
+        parameName = parameterList1[i].name
       }
       else {
-        parameterList[i].checked = false;//其他的位置为false
+        parameterList1[i].checked = false;//其他的位置为false
+      }
+    }
+    for (var i = 0; i < parameterList2.length; i++) {
+      if (parameterList2[i].id == this_checked) {
+        parameterList2[i].checked = true;//当前点击的位置为true即选中
+        parameName = parameterList2[i].name
+      }
+      else {
+        parameterList2[i].checked = false;//其他的位置为false
       }
     }
     that.setData({
-      parameter: parameterList,
+      parameter1: parameterList1,
+      parameter2: parameterList2,
       selectType: parameName
     })
   },
@@ -127,7 +143,8 @@ Page({
       this.data.inputDescrib = event.detail
     }
   },
-  async onSubmit() {
+  async onSubmit(e) {
+    console.log(e.detail.userInfo);
     let values = [
       { 'field': this.data.inputName, 'name': '姓名' },
       { 'field': this.data.inputAddress, 'name': '地址' },
@@ -145,10 +162,14 @@ Page({
           confirmText: '返回',
           success(res) { }
         })
-        break
+        return;
       }
     }
+    this.setData({
+      hidden: false
+    })
     const receiver = await WXAPI.queryConfigValue('receiver')
+    console.log(receiver.data)
     wx.cloud.callFunction({
       name: 'sendMail',
       data: {
@@ -157,12 +178,29 @@ Page({
         'name': this.data.inputName,
         'address': this.data.inputAddress,
         'phone': this.data.inputPhone,
-        'describ': this.data.inputDescrib
+        'describ': this.data.inputDescrib,
+        'wx_name': e.detail.userInfo ? e.detail.userInfo.nickName : '',
+        'wx_icon': e.detail.userInfo ? e.detail.userInfo.avatarUrl : ''
       },
     })
       .then(res => {
-        console.log(res.result)
+        this.setData({
+          hidden: true
+        })
+        if (res.result && res.result.response.match('250 Mail OK.*')) {
+          wx.showModal({
+            title: '提示',
+            content: '信息已提交，我们会尽快与您联系！',
+            showCancel: false,
+            confirmText: '确定',
+            success(res) { }
+          })
+        } else {
+          console.log(res.result)
+        }
+
       })
       .catch(console.error)
   }
+
 })

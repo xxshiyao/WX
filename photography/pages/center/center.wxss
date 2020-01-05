@@ -17,26 +17,37 @@ page {
   height: 120rpx;
 }
 
+.logo-text {
+  margin-left: 40rpx;
+  background-color: #fcb01e;
+  color: #ffffff;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: flex-end;
   font-size: 30rpx;
   font-weight: normal;
-  padding-left: 300rpx;
+  padding-left: 200rpx;
 }
 
-.telphone {
-  color: red;
+.contact-t1 {
+  color: #b0b0b0;
 }
 
 .call {
-  width: 50rpx;
-  height: 50rpx;
-  padding-bottom: 50rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 5rpx;
+  padding-bottom: 10rpx;
   vertical-align: middle;
 }
 
-.title_h1 {
+.title-h1 {
   border-top: 1px solid #efefef;
   font-size: 40rpx;
   display: block;
@@ -47,12 +58,13 @@ page {
 
 .text {
   display: flex;
-  font-size: 30rpx;
+  font-size: 35rpx;
   font-weight: normal;
   padding-left: 40rpx;
+  color: #b0b0b0;
 }
 
-.title_h2 {
+.title-h2 {
   border-top: 1px solid #efefef;
   font-size: 40rpx;
   display: block;
@@ -62,11 +74,27 @@ page {
   padding-top: 20rpx;
 }
 
-.checked_parameter{
-  background: red;
-  padding: 3rpx;
-  border-radius: 5rpx;
-  color: white;
+.checked-parameter {
+  color: #fcb01e !important;
+  border: 1rpx;
+  border-style: solid;
+  border-color: #fcb01e;
+}
+
+.parameter-info {
+  color: #b0b0b0;
+  padding: 5rpx;
+  font-size: 35rpx;
+}
+
+.parameter-row{
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+
+.parameter-col{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;  
 }
 
 .parameter-wrap {
@@ -84,7 +112,7 @@ page {
   padding: 30rpx 30rpx 30rpx 70rpx;
 }
 
-.parameter-wrap .title_h2  {
+.parameter-wrap .title-h2  {
   border-top: 1px solid #efefef;
   font-size: 40rpx;
   display: block;
@@ -106,12 +134,22 @@ page {
 }
 
 .kefu-botton[plain] {
+  width: 150rpx;
+  height: 150rpx;
   border: 0;
 }
 
-.kefu-botton-pic {
-  width: 80rpx;
-  height: 80rpx;
+.tips {
+  display: flex;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding-left: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.input-group {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
 }
 
 .submit {
@@ -120,4 +158,39 @@ page {
   align-items: center;
   flex-direction: row;
   padding-top: 20rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 40rpx;
+}
+
+
+.info-h1  {
+  font-size: 60rpx;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+  color: #fcb01e;
+}
+
+.info-h2  {
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.info-h3  {
+  font-size: 38rpx;
+  padding-bottom: 10rpx;
+}
+
+.info-text  {
+  font-size: 34rpx;
+  padding-bottom: 20rpx;
+  color: #b0b0b0;
+  text-align: center;
+  line-height: 200%;
 }

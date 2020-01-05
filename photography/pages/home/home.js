@@ -5,8 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photoCategories: undefined, // 推荐的文章
-    searchKeyword: '' // 搜索词
+    searchKeyword: '', // 搜索词
+    cmsCategories: undefined, // 分类列表
+    homeSwiper: undefined, // 推荐的分类列表
+    cmsCategoriesL1: undefined //一级分类
   },
 
   /**
@@ -24,6 +26,27 @@ Page({
     wx.setNavigationBarTitle({
       title: wx.getStorageSync('mallName')
     })
+    // 加载所有的分类数据
+    const cmsCategories = await WXAPI.cmsCategories();
+    if (cmsCategories.code == 0) {
+      const _cmsCategories = cmsCategories.data; // 所有分类数据
+
+      // 筛选首页轮番图
+      const homeSwiper = _cmsCategories.filter(entity => {
+        return entity.pid == 6986;
+      });
+
+      // 筛选灼影一级分类
+      const l1Categories = _cmsCategories.filter(entity => {
+        return entity.type == 'zy';
+      });
+
+      this.setData({
+        cmsCategories: _cmsCategories,
+        homeSwiper: homeSwiper,
+        cmsCategoriesL1: l1Categories
+      });
+    }
   },
 
   /**
@@ -36,23 +59,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  async onShow () {
-    // 加载所有的分类数据
-    const cmsCategories = await WXAPI.cmsCategories();
-    if (cmsCategories.code == 0) {
-      const _cmsCategories = cmsCategories.data; // 所有分类数据
-      // 筛选推荐的分类
-      const l1Categories = _cmsCategories.filter(entity => {
-        return entity.name == '摄影摄像';
-      });
-      const l2Categories = _cmsCategories.filter(entity => {
-        return entity.pid == l1Categories[0].id;
-      });
-      this.setData({
-        photoCategories: l2Categories
-      });
-      console.log(l2Categories)
-    }
+ onShow () {
   },
   onChange(e) {
     this.setData({

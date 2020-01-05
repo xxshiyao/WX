@@ -1,28 +1,30 @@
 <view class="top">
-    <image class="logo" src="/assets/images/logo_small.jpg"/>
-  <view class="contact" span="8">
-    <text>联系我们</text>
-    <text class="telphone">137 1668 9778</text>
+    <!-- <image class="logo" src="/assets/images/logo-small.jpg"/> -->
+  <text class="logo-text">灼影文化</text>
+  <view class="contact">
+    <text class="contact-t1">联系我们</text>
+    <text class="contact-t2">137-1668-9778</text>
   </view>
-  <image class="call" src="/assets/icons/dianhua-2.png" bindtap="calling"/>
+  <image class="call" src="/assets/icons/dianhua.png" bindtap="calling"/>
 </view>
-<text class="title_h1">体验一下：</text>
+<text class="title-h1">体验一下：</text>
 <text class="text">提出您的专属需求，交给我们。</text>
-<text class="title_h2">A：商业拍摄</text>
+<text class="title-h2">A：商业拍摄</text>
+<van-row custom-class="parameter-row">
+  <van-col custom-class="parameter-col" wx:for="{{parameter1}}" wx:key="parameter1" span="5" offset="2">
+    <text class='parameter-info text-over {{item.checked?"checked-parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
+  </van-col>
+</van-row>
 
-<view class='parameter-wrap'>
-  <block wx:for="{{parameter}}" wx:key="parameter">
-      <view wx:if="{{item.id==10}}">
-        <text class="title_h2">B：现场拍摄</text>
-      </view>
-      <view class="parameter-block">
-        <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
-      </view>
-  </block>
-</view>
+<text class="title-h2">B：现场拍摄</text>
+<van-row custom-class="parameter-row">
+  <van-col custom-class="parameter-col" wx:for="{{parameter2}}" wx:key="parameter2" span="5" offset="2">
+    <text class='parameter-info text-over {{item.checked?"checked-parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
+  </van-col>
+</van-row>
 
 <text class="tips">请输入您的基本信息：</text>
-<van-cell-group>
+<van-cell-group custom-class="input-group">
   <van-field
     id="inputName"
     required
@@ -54,8 +56,51 @@
   />
 </van-cell-group>
 <view class="submit">
-  <van-button type="danger" bind:click="onSubmit">提交信息</van-button>
+  <van-button color="#fcb01e"
+  form-type="submit"
+  open-type="getUserInfo"
+  bindgetuserinfo="onSubmit">提交信息</van-button>
+  <loading hidden="{{hidden}}">
+        发送中...
+  </loading>
 </view>
+
+<view class="info">
+  <text class="info-h1">01</text>
+  <text class="info-h2">我们是谁</text>
+  <text class="info-h2">——</text>
+  <text class="info-text">创始人晨光摄影师以独特时尚的作品，
+精湛的专业技术，
+独到的审美视觉为追求生活品昧的人士，
+创造了诠释真我的高端平台，
+其多部作品已刊登著名杂志。
+团队由一群有想法，在路上，
+勇于创新的80后、90后年轻摄影师组建，
+有野心但不浮蹂活力无限，信仰摄影。
+团队本身兼具自媒体属性，商业KOL价值。
+  </text>
+
+  <text class="info-h1">02</text>
+  <text class="info-h2">我们的优势</text>
+  <text class="info-h2">——</text>
+  <text class="info-h3">有一种心塞，你应该似曾相识</text>
+  <text class="info-text">现场明明有摄影师在拍摄，
+你却没有机会拿到照片。
+即便拿到，也是好多天之后的事了。
+你只能颤颐巍巍地举起右手，
+用手机镜头拍下照片发去朋友圈。
+但结果往往……
+  </text>
+  <text class="info-h3">摄影是一项严谨而复杂的工作</text>
+  <text class="info-text">对摄影师来说，
+什么叫“拍片一时爽，修片火葬场。”
+你懂的！
+因此，对图片片质量、数量、
+时限等方面的要求，
+客观上对应的往往是时间和技术成本。 
+  </text>
+</view>
+
  <button class="kefu-botton" open-type="contact" plain="true">
-  <image class="kefu-botton-pic" src='/assets/icons/kefuhongseqietu.png' mode='widthFix'></image>
+  <image src='/assets/icons/kefu.png' mode='widthFix'></image>
   </button>

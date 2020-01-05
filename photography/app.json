@@ -8,36 +8,31 @@
     "pages/resume/resume",
     "pages/commentList/commentList",
     "pages/article/article",
-    "pages/page/article"
+    "pages/page/article",
+    "pages/flash/flash"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "灼影Culture",
+    "navigationBarTitleText": "灼影·Culture",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#f8d174",
+    "selectedColor": "#000000",
     "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "/assets/icons/home.png",
-        "selectedIconPath": "/assets/icons/home-active.png"
-      },
-      {
-        "pagePath": "pages/hot/hot",
-        "text": "闪拍",
-        "iconPath": "/assets/icons/lightning.png",
-        "selectedIconPath": "/assets/icons/lightning-active.png"
+        "iconPath": "/assets/icons/shouye2.png",
+        "selectedIconPath": "/assets/icons/shouye1.png"
       },
       {
         "pagePath": "pages/center/center",
         "text": "定制",
-        "iconPath": "/assets/icons/me.png",
-        "selectedIconPath": "/assets/icons/me-active.png"
+        "iconPath": "/assets/icons/wode2.png",
+        "selectedIconPath": "/assets/icons/wode1.png"
       }
     ]
   },
