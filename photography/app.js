@@ -1,5 +1,5 @@
 const WXAPI = require('apifm-wxapi')
-WXAPI.init('9bc7d4ad3c1bc00fe1fbdf83f628158f')
+WXAPI.init('zyculture')
 
 App({
   onLaunch() {
