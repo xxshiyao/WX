@@ -21,7 +21,7 @@
 </view>
 
 <view class="homeVideo">
-  <video show-center-play-btn="true" src="https://dcdn.it120.cc/2019/12/28/83960ef0-8e94-4c84-b72d-e37bf0e025a1.mp4" controls="true" objectFit="fill" style="width: 730rpx; height: 410rpx">
+  <video show-center-play-btn="true" src="https://dcdn.it120.cc/2020/02/29/978654ac-0f5f-4db6-9a5c-7c16051a34f1.mp4" controls="true" objectFit="fill" style="width: 730rpx; height: 410rpx">
   </video>
 </view>
 
