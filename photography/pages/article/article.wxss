@@ -1,4 +1,3 @@
-@import "/wxParse/wxParse.wxss";
 .article-cover {
     position: relative;
     height: 460rpx;

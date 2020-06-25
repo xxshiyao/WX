@@ -142,11 +142,13 @@ swiper-item image {
 }
 
 .class-l1 text {
-  font-size: 30rpx;
+  font-size: 35rpx;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .costomized {

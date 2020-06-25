@@ -1,5 +1,4 @@
 const WXAPI = require('apifm-wxapi')
-const WxParse = require('../../wxParse/wxParse.js');
 const AUTH = require('../../utils/auth.js');
 Page({
 
@@ -40,8 +39,6 @@ Page({
     wx.setNavigationBarTitle({
       title: articleDetail.data.title
     })
-    // 文章详情
-    WxParse.wxParse('article', 'html', articleDetail.data.content, this, 5);
     // 判断是否已收藏
     this.checkFavStatus()
   },

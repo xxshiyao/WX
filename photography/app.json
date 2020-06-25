@@ -13,7 +13,8 @@
     "pages/page/article",
     "pages/flash/flash",
     "pages/component/kefu/kefu",
-    "pages/webview/webview"
+    "pages/webview/webview",
+    "pages/centerJump/centerJump"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,12 +34,20 @@
         "selectedIconPath": "/assets/icons/shouye1.png"
       },
       {
-        "pagePath": "pages/center/center",
+        "pagePath": "pages/centerJump/centerJump",
         "text": "定制",
         "iconPath": "/assets/icons/wode2.png",
         "selectedIconPath": "/assets/icons/wode1.png"
       }
     ]
   },
+    "usingComponents": {
+      "parser": "/components/parser.20200414.min/parser",
+      "loading": "/pages/component/loading/loading",
+      "kefu": "/pages/component/kefu/kefu",
+      "van-search": "../../miniprogram_npm/vant-weapp/search/index",
+      "van-row": "../../miniprogram_npm/vant-weapp/row/index",
+      "van-col": "../../miniprogram_npm/vant-weapp/col/index"
+    },
   "sitemapLocation": "sitemap.json"
 }

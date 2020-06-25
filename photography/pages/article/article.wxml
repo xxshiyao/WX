@@ -1,6 +1,5 @@
-<import src="../../wxParse/wxParse.wxml" />
 <view class="article-cover">
-  <image mode='aspectFill' src="{{ articleDetail.pic }}"></image>
+  <image mode='aspectFit' src="{{ articleDetail.pic }}"></image>
   <!-- <view class="title-warp">
     <text class="classify">{{ articleDetail.keywords }}</text>
     <text class="title">{{ articleDetail.title }}</text>
@@ -8,7 +7,7 @@
 </view>
 <view class="article-warp">
   <view class="article-content">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    <parser html="{{articleDetail.content}}" />
   </view>
   <view class="tool-bar">
     <view wx:if="{{!faved}}" class="tool" bindtap="fav">

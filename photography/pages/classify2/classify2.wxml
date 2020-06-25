@@ -3,10 +3,14 @@
   <view>
     <navigator wx:for="{{l2Categories}}" wx:key="id" hover-class='none' class="class-l2" url='../classify3/classify3?pid={{item.id}}'>
       <image mode='scaleToFill' src='{{item.icon}}'></image>
-      <text class="title">{{item.name}} | {{item.en}}</text>
-      <text class="description">{{zy_en}}</text>
-      <text class="description">{{item.text}}</text>
-      <text class="more">MORE ></text>
+      <view class="class-l2-bottom">
+        <view class="description">
+          <text class="title">{{item.name}} | {{item.en}}</text>
+          <text class="text">{{zy_en}}</text>
+          <text class="text">{{item.text}}</text>
+          <text class="more">MORE ></text>
+        </view>
+      </view>
     </navigator>
   </view>
 </view>

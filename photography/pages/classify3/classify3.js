@@ -55,14 +55,34 @@ Page({
     }
   },
   async fetchArticlesByKeyword(keyword) {
-    const response = await WXAPI.cmsArticles({
+    // search title
+    let response = await WXAPI.cmsArticles({
+      titleLike: keyword
+    });
+    if (response.code == 0) {
+      this.setData({
+        articleList: this.data.articleList.concat(response.data)
+      });
+    } 
+    // search keyword
+    response = await WXAPI.cmsArticles({
       keywordsLike: keyword
     });
     if (response.code == 0) {
       this.setData({
         articleList: this.data.articleList.concat(response.data)
       });
-    } else {
+    } 
+    // search tag
+    response = await WXAPI.cmsArticles({
+      tagsLike: keyword
+    });
+    if (response.code == 0) {
+      this.setData({
+        articleList: this.data.articleList.concat(response.data)
+      });
+    }
+    if (this.data.articleList.length == 0) {
       wx.showModal({
           title: '提示',
           content: '未找到相关作品，再换个关键词试试吧 ^_^',
@@ -72,6 +92,20 @@ Page({
             wx.navigateBack()
           }
       })
+    } else {
+      // unique article
+      let obj = {}
+      let newArr = []
+      for (let i = 0; i < this.data.articleList.length; i++) {
+        let id = this.data.articleList[i].id
+        if (!obj[id]) {
+          obj[id] = 1
+           newArr.push(this.data.articleList[i])
+        }
+      }
+      this.setData({
+        articleList: newArr
+      });
     }
   },
   /**
