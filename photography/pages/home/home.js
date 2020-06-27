@@ -47,7 +47,6 @@ Page({
         cmsCategoriesL1: l1Categories,
       });
       wx.setStorageSync("cmsCategories", _cmsCategories);
-
     }
   },
 

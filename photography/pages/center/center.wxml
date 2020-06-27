@@ -57,7 +57,9 @@
   />
 </van-cell-group>
 <view class="submit">
-  <van-button color="#fcb01e"
+  <van-button 
+  class="s-button"
+  color="#fcb01e"
   form-type="submit"
   open-type="getUserInfo"
   bindgetuserinfo="onSubmit">提交信息</van-button>

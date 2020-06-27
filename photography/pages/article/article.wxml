@@ -1,10 +1,10 @@
-<view class="article-cover">
-  <image mode='aspectFit' src="{{ articleDetail.pic }}"></image>
+<!-- <view class="article-cover">
+  <image mode='aspectFit' src="{{ articleDetail.pic }}"></image> -->
   <!-- <view class="title-warp">
     <text class="classify">{{ articleDetail.keywords }}</text>
     <text class="title">{{ articleDetail.title }}</text>
   </view> -->
-</view>
+<!-- </view> -->
 <view class="article-warp">
   <view class="article-content">
     <parser html="{{articleDetail.content}}" />

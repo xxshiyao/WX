@@ -1,7 +1,9 @@
 /* pages/hot/hot.wxss */
 
 page {
-    padding-bottom: 10rpx;
+  padding-bottom: 10rpx;
+  /* margin-left: 10rpx; */
+  margin-right: 10rpx;
 }
 
 swiper {
@@ -137,7 +139,7 @@ swiper-item image {
 
 .class-l1 image {
   float: center;
-  width: 724rpx;
+  width: 700rpx;
   height: 407rpx;
 }
 
@@ -163,6 +165,6 @@ swiper-item image {
 
 .costomized image {
   float: center;
-  width: 724rpx;
+  width: 700rpx;
   height: 198rpx;
 }

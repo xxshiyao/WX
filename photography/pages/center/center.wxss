@@ -21,7 +21,7 @@ page {
   margin-left: 40rpx;
   background-color: #fcb01e;
   color: #ffffff;
-  padding: 20rpx 20rpx 20rpx 20rpx;
+  padding: 20rpx 40rpx 20rpx 40rpx;
 }
 
 .contact {
@@ -141,7 +141,7 @@ page {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding-top: 20rpx;
+  margin-top: 20rpx;
 }
 
 .info {

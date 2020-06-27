@@ -6,6 +6,6 @@
 
 <navigator class="jump" url="/pages/center/center" open-type="navigate" hover-class="navigator-hover" class="costomized">
   <view class="bottom">
-    <text>立即定制</text>
+    <text>摄影定制</text>
   </view>
 </navigator>

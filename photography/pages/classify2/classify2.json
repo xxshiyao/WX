@@ -2,6 +2,7 @@
     "navigationBarBackgroundColor": "#f2f2f2",
     "navigationBarTextStyle": "black",
     "usingComponents": {
-      "kefu": "/pages/component/kefu/kefu"
+      "kefu": "/pages/component/kefu/kefu",
+      "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
     }
 }

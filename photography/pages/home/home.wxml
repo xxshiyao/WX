@@ -21,7 +21,7 @@
 </view>
 
 <view class="homeVideo">
-  <video show-center-play-btn="true" src="https://dcdn.it120.cc/2020/02/29/978654ac-0f5f-4db6-9a5c-7c16051a34f1.mp4" controls="true" objectFit="fill" style="width: 730rpx; height: 410rpx">
+  <video show-center-play-btn="true" src="https://dcdn.it120.cc/2020/02/29/978654ac-0f5f-4db6-9a5c-7c16051a34f1.mp4" controls="true" objectFit="fill" style="width: 700rpx; height: 410rpx">
   </video>
 </view>
 
@@ -34,7 +34,7 @@
 
 <view class="shanpai">
   <navigator hover-class="none"url='/pages/classify2sp/classify2sp?id=6990'>
-    <image mode="scaleToFill" style="width: 730rpx; height: 200rpx" src="/assets/images/shanpai.png"></image>
+    <image mode="scaleToFill" style="width: 700rpx; height: 200rpx" src="/assets/images/shanpai.png"></image>
   </navigator>
 </view>
 
@@ -68,6 +68,19 @@
       <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6982'>
       <image mode="scaleToFill" src='{{cmsCategoriesL1[3].icon}}'></image>
       <text>{{cmsCategoriesL1[3].name}}</text>
+    </navigator>
+  </view>
+</view>
+
+<view class="list">
+  <view class="title">
+    <text class="h1">「其他服务」</text>
+  </view>
+
+  <view>
+      <navigator hover-class="none" class="class-l1" url='/pages/classify2/classify2?pid=6982'>
+      <image mode="scaleToFill" src='{{cmsCategoriesL1[5].icon}}'></image>
+      <text>{{cmsCategoriesL1[5].name}}</text>
     </navigator>
   </view>
 </view>

@@ -9,14 +9,15 @@ page {
   flex-direction: column;
   overflow: hidden;
   float: center;
-  width: 334rpx;
+  width: 310rpx;
   box-shadow: 0px 2px 5px #888888;
   margin-bottom: 40rpx;
+  margin-left: 15rpx;
 }
 
 .article-item .article-cover {
-    width: 334rpx;
-    height: 223rpx;
+    width: 310rpx;
+    height: 180rpx;
 }
 
 .article-item .title {
@@ -27,5 +28,5 @@ page {
     text-overflow: ellipsis;
     letter-spacing: 0.05rem;
     display: block;
-    padding: 10rpx;
+    padding: 15rpx 0rpx 15rpx 0rpx;
 }
