@@ -133,7 +133,7 @@ swiper-item image {
   flex-direction: column;
   overflow: hidden;
   float: center;
-  box-shadow: 0px 2px 5px #888888;
+  box-shadow: 0px 2px 5px #e2e1e1;
   margin-bottom: 40rpx;
 }
 

@@ -15,8 +15,8 @@ Page({
       right: false,
       round: false,
       closeIcon: false,
-      customCloseIcon: false,
-      customIconPosition: false
+      summitIcon: false,
+      summitIconBackground: false
     },
     l2Categories: undefined, //二级分类详情列表
     zy_en: "Brilliant Shadow Culture (Beijing) Co., Ltd.",
@@ -110,7 +110,9 @@ Page({
     this.setData({
       select_text_all_color: this.data.default_unselect_text_color,
       select_text_list_color: this.data.default_select_text_color,
-      [`show.right`]: true
+      [`show.right`]: true,
+      [`show.summitIcon`]: true,
+      [`show.summitIconBackground`]: true
     });
   },
   click_ok: function (e) {
@@ -128,6 +130,8 @@ Page({
   },
   hideRight() {
     this.toggle('right', false);
+    this.toggle('summitIcon', false);
+    this.toggle('summitIconBackground', false);
     this.setData({
       select_text_all_color: this.data.default_select_text_color,
       select_text_list_color: this.data.default_unselect_text_color,

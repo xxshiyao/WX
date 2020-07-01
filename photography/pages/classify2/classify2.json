@@ -3,6 +3,7 @@
     "navigationBarTextStyle": "black",
     "usingComponents": {
       "kefu": "/pages/component/kefu/kefu",
-      "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
+      "van-popup": "../../miniprogram_npm/vant-weapp/popup/index",
+      "van-transition": "../../miniprogram_npm/vant-weapp/transition/index"
     }
 }

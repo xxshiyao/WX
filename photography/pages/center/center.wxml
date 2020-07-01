@@ -56,17 +56,15 @@
     bind:change="onChange"
   />
 </van-cell-group>
-<view class="submit">
   <van-button 
-  class="s-button"
-  color="#fcb01e"
   form-type="submit"
   open-type="getUserInfo"
-  bindgetuserinfo="onSubmit">提交信息</van-button>
+  bindgetuserinfo="onSubmit"
+  custom-class="bottom"
+  >提交信息</van-button>
   <loading hidden="{{hidden}}">
         发送中...
   </loading>
-</view>
 
 <view class="info">
   <text class="info-h1">01</text>

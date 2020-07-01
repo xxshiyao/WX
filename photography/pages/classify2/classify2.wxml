@@ -12,6 +12,9 @@
   </view>
   <van-popup
     show="{{show.right}}"
+    closeable
+    close-icon="close"
+    close-icon-position="top-left"
     position="right"
     custom-style="width: 70%; height: 100%"
     bind:close="hideRight"
@@ -56,6 +59,8 @@
       </view>
     </view>
 
+    <view class="popup-list-append"></view>
+
     <!-- <view class="popup-list">
       <text class="popup-list-title">其他服务</text>
       <view class="parameter-row"  wx:for="{{parameter5}}" wx:key="parameter5">
@@ -64,11 +69,17 @@
         <text wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>{{item[1].name}}</text>
       </view>
     </view> -->
+  </van-popup>
 
+  <van-transition
+    show="{{ show.summitIcon }}"
+    name="fade-up"
+    duration="{{ { enter: 500, leave: 500  } }}">
     <view class="submit" bindtap="click_ok">
       <text>确定</text>
     </view>
-  </van-popup>
+    <view class="submit-background"></view>
+  </van-transition>
 
 <view>
     <navigator wx:for="{{l2Categories}}" wx:key="id" hover-class='none' class="class-l2" url='../classify3/classify3?pid={{item.id}}'>
