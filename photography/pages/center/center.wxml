@@ -11,18 +11,18 @@
 <text class="title-h1">体验一下：</text>
 <text class="text">提出您的专属需求，交给我们。</text>
 <text class="title-h2">A：商业拍摄</text>
-<van-row custom-class="parameter-row">
-  <van-col custom-class="parameter-col" wx:for="{{parameter1}}" wx:key="parameter1" span="5" offset="2">
-    <text class='parameter-info text-over {{item.checked?"checked-parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
-  </van-col>
-</van-row>
+<view class="parameter-row" wx:for="{{parameter1}}" wx:key="parameter1">
+  <view wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'><text>{{item[0].name}}</text></view>
+  <view wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'><text>{{item[1].name}}</text></view>
+  <view wx:if="{{item[2]}}" class='parameter-info text-over {{item[2].checked?"checked-parameter":""}}' data-id='{{item[2].id}}' bindtap='parameterTap'><text>{{item[2].name}}</text></view>
+</view>
 
 <text class="title-h2">B：现场拍摄</text>
-<van-row custom-class="parameter-row">
-  <van-col custom-class="parameter-col" wx:for="{{parameter2}}" wx:key="parameter2" span="5" offset="2">
-    <text class='parameter-info text-over {{item.checked?"checked-parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
-  </van-col>
-</van-row>
+<view class="parameter-row" wx:for="{{parameter2}}" wx:key="parameter2">
+  <view wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'><text>{{item[0].name}}</text></view>
+  <view wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'><text>{{item[1].name}}</text></view>
+  <view wx:if="{{item[2]}}" class='parameter-info text-over {{item[2].checked?"checked-parameter":""}}' data-id='{{item[2].id}}' bindtap='parameterTap'><text>{{item[2].name}}</text></view>
+</view>
 
 <text class="tips">请输入您的基本信息：</text>
 <van-cell-group custom-class="input-group">

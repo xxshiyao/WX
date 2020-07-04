@@ -8,26 +8,26 @@ Page({
    */
   data: {
     parameter1: [
-      { id: 1, name: '电影海报' },
+      [{ id: 1, name: '电影海报' },
       { id: 2, name: '平面广告' },
-      { id: 3, name: '静物拍摄' },
-      { id: 4, name: '人像拍摄' },
+      { id: 3, name: '静物拍摄' }],
+      [{ id: 4, name: '人像拍摄' },
       { id: 5, name: 'TVC广告' },
-      { id: 6, name: '美食拍摄' },
-      { id: 7, name: '企业宣传' },
+      { id: 6, name: '美食拍摄' }],
+      [{ id: 7, name: '企业宣传' },
       { id: 8, name: 'VLOG' },
-      { id: 9, name: '其它' }
+      { id: 9, name: '其它' }]
     ],
     parameter2: [
-      { id: 10, name: '会议拍摄' },
+      [{ id: 10, name: '会议拍摄' },
       { id: 11, name: '体育赛事' },
-      { id: 12, name: '商业活动' },
-      { id: 13, name: '娱乐活动' },
+      { id: 12, name: '商业活动' }],
+      [{ id: 13, name: '娱乐活动' },
       { id: 14, name: '专访街拍' },
-      { id: 15, name: '旅游团建' },
-      { id: 16, name: '亲子活动' },
+      { id: 15, name: '旅游团建' }],
+      [{ id: 16, name: '亲子活动' },
       { id: 17, name: '婚礼现场' },
-      { id: 18, name: '其它' }
+      { id: 18, name: '其它' }]
     ],
     selectType: '',
     inputName: '',
@@ -42,11 +42,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.parameter1[0].checked = true;
+    this.data.parameter1[0][0].checked = true;
     this.setData({
       parameter1: this.data.parameter1,
       parameter2: this.data.parameter2,
-      selectType: this.data.parameter1[0].name
+      selectType: this.data.parameter1[0][0].name
     })
   },
 
@@ -109,21 +109,25 @@ Page({
     var parameterList2 = this.data.parameter2//获取Json数组
     var parameName = ''
     for (var i = 0; i < parameterList1.length; i++) {
-      if (parameterList1[i].id == this_checked) {
-        parameterList1[i].checked = true;//当前点击的位置为true即选中
-        parameName = parameterList1[i].name
-      }
-      else {
-        parameterList1[i].checked = false;//其他的位置为false
+      for (var j=0; j < parameterList1[i].length; j++) {
+        if (parameterList1[i][j].id == this_checked) {
+          parameterList1[i][j].checked = true;//当前点击的位置为true即选中
+          parameName = parameterList1[i][j].name
+        }
+        else {
+          parameterList1[i][j].checked = false;//其他的位置为false
+        }
       }
     }
     for (var i = 0; i < parameterList2.length; i++) {
-      if (parameterList2[i].id == this_checked) {
-        parameterList2[i].checked = true;//当前点击的位置为true即选中
-        parameName = parameterList2[i].name
-      }
-      else {
-        parameterList2[i].checked = false;//其他的位置为false
+      for (var j=0; j < parameterList2[i].length; j++) {
+        if (parameterList2[i][j].id == this_checked) {
+          parameterList2[i][j].checked = true;//当前点击的位置为true即选中
+          parameName = parameterList2[i][j].name
+        }
+        else {
+          parameterList2[i][j].checked = false;//其他的位置为false
+        }
       }
     }
     that.setData({

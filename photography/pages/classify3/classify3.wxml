@@ -1,9 +1,14 @@
 <kefu></kefu>
-<van-row custom-class="aritcle-list">
-  <van-col custom-class="aritcle-col" wx:for="{{articleList}}" wx:key="id" span="10" offset="1">
-    <navigator class="article-item" url='../article/article?id={{item.id}}'>
-      <image class="article-cover" mode='scaleToFill' src='{{item.pic}}'></image>
-      <text class="title">{{item.title}}</text>
+<top-select level="3" pid="{{pid}}" ></top-select>
+<view class="aritcle-list">
+  <view class="aritcle-col" wx:for="{{articleList}}" wx:key="id">
+    <navigator wx:if="{{item[0]}}" class="article-item" url='../article/article?id={{item[0].id}}'>
+      <image class="article-cover" mode='scaleToFill' src='{{item[0].pic}}'></image>
+      <text class="title">{{item[0].title}}</text>
     </navigator>
-  </van-col>
-</van-row>
+    <navigator wx:if="{{item[1]}}" class="article-item" url='../article/article?id={{item[1].id}}'>
+      <image class="article-cover" mode='scaleToFill' src='{{item[1].pic}}'></image>
+      <text class="title">{{item[1].title}}</text>
+    </navigator>
+  </view>
+</view>

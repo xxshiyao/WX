@@ -6,7 +6,8 @@ Page({
    */
   data: {
     page: 1, // 读取第几页数据，便于实现下滑分页
-    articleList: [] // 文章列表
+    articleList: [], // 文章列表
+    pid: 6983 //默认分类
   },
 
   /**
@@ -43,14 +44,30 @@ Page({
 
   },
 
+  shapeList(oldList) {
+    let newList = [];
+    for (let i = 0; i < oldList.length/2; i++) {
+      let tmpList = [];
+      tmpList[0] = oldList[i*2];
+      if (i*2+1 < oldList.length) {
+        tmpList[1] = oldList[i*2+1];
+      }
+      newList.push(tmpList);
+    }
+    return newList;
+  },
+
   async fetchArticles (pid) {
+    this.setData({
+      pid: pid
+    });
     const response = await WXAPI.cmsArticles({
       page: this.data.page,
       categoryId: pid
     });
     if (response.code == 0) {
       this.setData({
-        articleList: this.data.articleList.concat(response.data)
+        articleList: this.shapeList(this.data.articleList.concat(response.data))
       });
     }
   },
@@ -104,7 +121,7 @@ Page({
         }
       }
       this.setData({
-        articleList: newArr
+        articleList: this.shapeList(newArr)
       });
     }
   },

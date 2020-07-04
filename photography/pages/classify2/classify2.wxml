@@ -1,87 +1,7 @@
 <kefu></kefu>
+<top-select level="2" pid="{{pid}}" ></top-select>
 
-<view>
-  <view class="top-select">
-    <view bindtap="click_all">
-      <text style="color:{{select_text_all_color}}">全部</text>
-    </view>
-    <text class="top-select-split">|</text>
-    <view bindtap="click_list">
-      <text style="color:{{select_text_list_color}}">筛选</text>
-    </view>
-  </view>
-  <van-popup
-    show="{{show.right}}"
-    closeable
-    close-icon="close"
-    close-icon-position="top-left"
-    position="right"
-    custom-style="width: 70%; height: 100%"
-    bind:close="hideRight"
-  >
-    <view class="popup-list">
-      <text class="popup-list-title">产品拍摄</text>
-      <view class="parameter-row"  wx:for="{{parameter1}}" wx:key="parameter1">
-          <view wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'>
-            <text>{{item[0].name}}</text>
-          </view>
-          <view class="parameter-row-split"></view>
-          <view wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>
-            <text>{{item[1].name}}</text>
-          </view>
-      </view>
-    </view>
-
-    <view class="popup-list">
-      <text class="popup-list-title">人像拍摄</text>
-      <view class="parameter-row"  wx:for="{{parameter2}}" wx:key="parameter2">
-        <text wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'>{{item[0].name}}</text>
-        <view class="parameter-row-split"></view>
-        <text wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>{{item[1].name}}</text>
-      </view>
-    </view>
-
-    <view class="popup-list">
-      <text class="popup-list-title">活动视频</text>
-      <view class="parameter-row"  wx:for="{{parameter3}}" wx:key="parameter3">
-        <text wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'>{{item[0].name}}</text>
-        <view class="parameter-row-split"></view>
-        <text wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>{{item[1].name}}</text>
-      </view>
-    </view>
-
-    <view class="popup-list">
-      <text class="popup-list-title">商业视频</text>
-      <view class="parameter-row"  wx:for="{{parameter4}}" wx:key="parameter4">
-        <text wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'>{{item[0].name}}</text>
-        <view class="parameter-row-split"></view>
-        <text wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>{{item[1].name}}</text>
-      </view>
-    </view>
-
-    <view class="popup-list-append"></view>
-
-    <!-- <view class="popup-list">
-      <text class="popup-list-title">其他服务</text>
-      <view class="parameter-row"  wx:for="{{parameter5}}" wx:key="parameter5">
-        <text wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'>{{item[0].name}}</text>
-        <view class="parameter-row-split"></view>
-        <text wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'>{{item[1].name}}</text>
-      </view>
-    </view> -->
-  </van-popup>
-
-  <van-transition
-    show="{{ show.summitIcon }}"
-    name="fade-up"
-    duration="{{ { enter: 500, leave: 500  } }}">
-    <view class="submit" bindtap="click_ok">
-      <text>确定</text>
-    </view>
-    <view class="submit-background"></view>
-  </van-transition>
-
-<view>
+<view class="body">
     <navigator wx:for="{{l2Categories}}" wx:key="id" hover-class='none' class="class-l2" url='../classify3/classify3?pid={{item.id}}'>
       <image mode='scaleToFill' src='{{item.icon}}'></image>
       <view class="class-l2-bottom">
@@ -93,5 +13,4 @@
         </view>
       </view>
     </navigator>
-  </view>
 </view>

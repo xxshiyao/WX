@@ -14,7 +14,8 @@
     "pages/flash/flash",
     "pages/component/kefu/kefu",
     "pages/webview/webview",
-    "pages/centerJump/centerJump"
+    "pages/centerJump/centerJump",
+    "pages/component/top-select/top-select"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,13 +42,13 @@
       }
     ]
   },
-    "usingComponents": {
-      "parser": "/components/parser.20200414.min/parser",
-      "loading": "/pages/component/loading/loading",
-      "kefu": "/pages/component/kefu/kefu",
-      "van-search": "../../miniprogram_npm/vant-weapp/search/index",
-      "van-row": "../../miniprogram_npm/vant-weapp/row/index",
-      "van-col": "../../miniprogram_npm/vant-weapp/col/index"
-    },
+  "usingComponents": {
+    "parser": "/components/parser.20200414.min/parser",
+    "loading": "/pages/component/loading/loading",
+    "kefu": "/pages/component/kefu/kefu",
+    "van-search": "../../miniprogram_npm/vant-weapp/search/index",
+    "van-row": "../../miniprogram_npm/vant-weapp/row/index",
+    "van-col": "../../miniprogram_npm/vant-weapp/col/index"
+  },
   "sitemapLocation": "sitemap.json"
 }
