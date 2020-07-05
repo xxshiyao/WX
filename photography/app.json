@@ -4,18 +4,15 @@
     "pages/classify2/classify2",
     "pages/classify2sp/classify2sp",
     "pages/classify3/classify3",
-    "pages/hot/hot",
     "pages/center/center",
-    "pages/credits/credits",
-    "pages/resume/resume",
     "pages/commentList/commentList",
     "pages/article/article",
-    "pages/page/article",
-    "pages/flash/flash",
     "pages/component/kefu/kefu",
     "pages/webview/webview",
     "pages/centerJump/centerJump",
-    "pages/component/top-select/top-select"
+    "pages/component/top-select/top-select",
+    "pages/centerSubmit/centerSubmit",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,6 +34,12 @@
       {
         "pagePath": "pages/centerJump/centerJump",
         "text": "定制",
+        "iconPath": "/assets/icons/shanpai2.png",
+        "selectedIconPath": "/assets/icons/shanpai1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
         "iconPath": "/assets/icons/wode2.png",
         "selectedIconPath": "/assets/icons/wode1.png"
       }

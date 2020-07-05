@@ -5,7 +5,5 @@
 </view>
 
 <navigator class="jump" url="/pages/center/center" open-type="navigate" hover-class="navigator-hover" class="costomized">
-  <view class="bottom">
-    <text>摄影定制</text>
-  </view>
+  <view class="bottom"></view>
 </navigator>

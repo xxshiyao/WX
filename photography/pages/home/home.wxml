@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
+<official-account></official-account>
 <loading></loading>
 <kefu></kefu>
 
@@ -86,6 +87,10 @@
 </view>
 
 <navigator url="/pages/centerJump/centerJump" open-type="switchTab" hover-class="navigator-hover" class="costomized">
-      <image mode="scaleToFill" src='/assets/images/customized.jpg'></image>
-  </navigator>
-  <image mode="scaleToFill" style="width: 724rpx; height: 290rpx" src="/assets/images/zhuoying.png"></image>
+  <image mode="scaleToFill" src='/assets/images/customized.jpg'></image>
+</navigator>
+
+<view class="title">
+  <text class="h1">「关于灼影」</text>
+</view>
+<image mode="scaleToFill" style="width: 724rpx; height: 290rpx; margin-top: 20rpx" src="/assets/images/zhuoying.png"></image>

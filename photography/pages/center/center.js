@@ -35,7 +35,6 @@ Page({
     inputAddress: '',
     inputDescrib: '',
     hidden: true
-
   },
 
   /**
@@ -135,6 +134,9 @@ Page({
       parameter2: parameterList2,
       selectType: parameName
     })
+    wx.navigateTo({
+      url: '/pages/centerSubmit/centerSubmit?type=' + this.data.selectType
+    });
   },
   onChange(event) {
     if (event.currentTarget.id == 'inputName') {

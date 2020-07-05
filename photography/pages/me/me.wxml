@@ -1,0 +1,23 @@
+<!--pages/me/me.wxml-->
+<kefu></kefu>
+<image class="top-bg" mode="scaleToFill" src="/assets/images/me_bg.jpg"></image>
+<view class="top-cover"></view>
+<image class="top-logo" src="/assets/images/myyingw.png"></image>
+<view class="card">
+  <view class="card-text">
+    <text>喜欢</text>
+    <text class="card-text-number">9990</text>
+  </view>
+  <image class="card-icon" src="/assets/icons/xin.png"></image>
+  <view class="card-text">
+    <text>收藏</text>
+    <text class="card-text-number">2990</text>
+  </view>
+</view>
+<view class="message">
+  <text class="message-title">- 灼影·Culture -</text>
+  <text>13720079400</text>
+  <text>13720079400</text>
+  <text>地址：北京市朝阳区6003文化创意园-B2栋</text>
+</view>
+<button class="message-button" open-type="contact" plain="true"></button>

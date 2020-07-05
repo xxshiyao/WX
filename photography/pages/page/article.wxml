@@ -1,5 +1,0 @@
-<view class="article-warp">
-  <view class="article-content">
-    <parser html="{{articleDetail.content}}" />
-  </view>  
-</view>

@@ -18,13 +18,14 @@
   flex-direction: column;
   overflow: hidden;
   float: center;
-  font-size: 35rpx;
+  font-size: 32rpx;
   width: 350rpx;
   margin: 20rpx 0rpx 20rpx 0rpx;
 }
 
 .top-select-split {
   color: #e2e2e2;
+  font-size: 37rpx;
 }
 
 .popup-list {

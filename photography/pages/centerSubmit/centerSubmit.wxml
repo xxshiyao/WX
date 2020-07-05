@@ -1,30 +1,16 @@
+<!--pages/centerSubmit/centerSubmit.wxml-->
 <kefu></kefu>
 <view class="top">
     <!-- <image class="logo" src="/assets/images/logo-small.jpg"/> -->
   <text class="logo-text">灼影文化</text>
   <view class="contact">
     <text class="contact-t1">联系我们</text>
-    <text class="contact-t2">137-2007-9400</text>
+    <text class="contact-t2">137-1668-9778</text>
   </view>
   <image class="call" src="/assets/icons/dianhua.png" bindtap="calling"/>
 </view>
-<text class="title-h1">体验一下：</text>
-<text class="text">提出您的专属需求，交给我们。</text>
-<text class="title-h2">A：商业拍摄</text>
-<view class="parameter-row" wx:for="{{parameter1}}" wx:key="parameter1">
-  <view wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'><text>{{item[0].name}}</text></view>
-  <view wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'><text>{{item[1].name}}</text></view>
-  <view wx:if="{{item[2]}}" class='parameter-info text-over {{item[2].checked?"checked-parameter":""}}' data-id='{{item[2].id}}' bindtap='parameterTap'><text>{{item[2].name}}</text></view>
-</view>
 
-<text class="title-h2">B：现场拍摄</text>
-<view class="parameter-row" wx:for="{{parameter2}}" wx:key="parameter2">
-  <view wx:if="{{item[0]}}" class='parameter-info text-over {{item[0].checked?"checked-parameter":""}}' data-id='{{item[0].id}}' bindtap='parameterTap'><text>{{item[0].name}}</text></view>
-  <view wx:if="{{item[1]}}" class='parameter-info text-over {{item[1].checked?"checked-parameter":""}}' data-id='{{item[1].id}}' bindtap='parameterTap'><text>{{item[1].name}}</text></view>
-  <view wx:if="{{item[2]}}" class='parameter-info text-over {{item[2].checked?"checked-parameter":""}}' data-id='{{item[2].id}}' bindtap='parameterTap'><text>{{item[2].name}}</text></view>
-</view>
-
-<!-- <text class="tips">请输入您的基本信息：</text>
+<text class="tips">请输入您的基本信息：</text>
 <van-cell-group custom-class="input-group">
   <van-field
     id="inputName"
@@ -100,4 +86,4 @@
 时限等方面的要求，
 客观上对应的往往是时间和技术成本。 
   </text>
-</view> -->
+</view>

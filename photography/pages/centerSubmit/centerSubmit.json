@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#f2f2f2",
+  "disableScroll": false,
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "摄影定制",
+  "usingComponents": {
+    "kefu": "/pages/component/kefu/kefu",
+    "van-button":"../../miniprogram_npm/vant-weapp/button/index",
+    "van-field": "../../miniprogram_npm/vant-weapp/field/index",
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group/index"
+  }
+}
